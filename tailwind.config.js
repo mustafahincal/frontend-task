@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        navItem: "112B3C",
+        "nav-item": "#112B3C",
+        "nav-button": "#F66B0E",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        dancing: ["Dancing Script", "cursive"],
+        "source-sans-pro": ["Source Sans Pro", "sans-serif"],
       },
     },
   },
