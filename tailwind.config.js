@@ -14,6 +14,9 @@ module.exports = {
         "customer-comments-bg": "#112B3C",
         "product-page-header-search": "#F3F3F3",
         "product-search-button": "#0064D2",
+        "product-image-bg": "#E6F0FB",
+        "product-description-text": "#2F294D",
+        "product-page-sponsored": "#1E1F4B",
       },
       fontFamily: {
         "source-sans-pro": ["Source Sans Pro", "sans-serif"],
@@ -24,6 +27,7 @@ module.exports = {
       },
       boxShadow: {
         "product-header": "0px 0px 30px rgba(0, 0, 0, 0.12)",
+        "sponsored-item": "0px 4px 30px rgba(0, 0, 0, 0.08)",
       },
     },
   },

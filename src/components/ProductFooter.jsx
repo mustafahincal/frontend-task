@@ -32,7 +32,7 @@ const ProductFooter = () => {
         </ul>
       </div>
       <hr className="w-full m-auto" />
-      <div className="flex justify-between mt-14 items-center">
+      <div className="flex justify-between my-14 items-center">
         <div className="text-[16px]">© 2022, All rights reserved</div>
         <img src="./assets/footer-creditcards.svg" alt="" />
       </div>
