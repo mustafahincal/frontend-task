@@ -3,7 +3,7 @@ import React from "react";
 const ProductFooter = () => {
   return (
     <div className="bg-white w-4/5  m-auto mt-20">
-      <img src="./assets/footer-divider.svg" alt="" />
+      <hr className="w-full m-auto" />
       <div className="flex justify-between py-20">
         <img src="./assets/ebay.svg" className="self-start" alt="" />
         <ul className="flex flex-col gap-y-5">
@@ -31,7 +31,7 @@ const ProductFooter = () => {
           <li>Privacy Policy</li>
         </ul>
       </div>
-      <img src="./assets/footer-divider.svg" alt="" />
+      <hr className="w-full m-auto" />
       <div className="flex justify-between mt-14 items-center">
         <div className="text-[16px]">© 2022, All rights reserved</div>
         <img src="./assets/footer-creditcards.svg" alt="" />
