@@ -10,6 +10,7 @@ module.exports = {
         "content-bg": "#F5F5F5",
         "content-small-text": "#828282",
         search: "#BDBDBD",
+        "product-bg": "#FFF8F0",
       },
       fontFamily: {
         "source-sans-pro": ["Source Sans Pro", "sans-serif"],
