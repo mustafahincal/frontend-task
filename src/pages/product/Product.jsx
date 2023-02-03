@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const responsive = {
@@ -24,9 +25,11 @@ const Product = () => {
     <>
       <div className="w-4/5 m-auto mt-10">
         <div className="flex gap-6 items-center">
-          <img src="./assets/product-page-left-arrow.svg" alt="" />
+          <Link to="/">
+            <img src="./assets/product-page-left-arrow.svg" alt="" />
+          </Link>
           <span className="font-medium text-[18px]">
-            Back to previous page | Listed in category:{" "}
+            Back to previous page | Listed in category:
             <span className="text-product-search-button underline ml-1 mr-5">
               Cell Phones & Accessories
             </span>

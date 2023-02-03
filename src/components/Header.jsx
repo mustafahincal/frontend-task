@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const handleBuyButton = () => {
+    navigate("/product");
+  };
   return (
     <div className="shadow-md">
       <div className="bg-white w-3/4 h-[80px] text-nav-item  m-auto flex justify-between items-center">
@@ -17,7 +22,10 @@ const Header = () => {
         </div>
         <div>
           <span className="mr-[30px]">Contact</span>
-          <button className="px-[20px] py-[10px] bg-nav-button text-white">
+          <button
+            onClick={() => handleBuyButton()}
+            className="px-[20px] py-[10px] bg-nav-button text-white"
+          >
             Buy online
           </button>
         </div>

@@ -9,12 +9,16 @@ import ContactUs from "./pages/contactUs/ContactUs";
 import ProductHeader from "./components/ProductHeader";
 import ProductFooter from "./components/ProductFooter";
 import Product from "./pages/product/Product";
+import { Route, Routes } from "react-router-dom";
+import MainContent from "./layout/MainContent";
+import ProductContent from "./layout/ProductContent";
 function App() {
   return (
     <div className="font-poppins">
-      <ProductHeader />
-      <Product />
-      <ProductFooter />
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="/product" element={<ProductContent />} />
+      </Routes>
     </div>
   );
 }
