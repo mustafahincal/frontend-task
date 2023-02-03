@@ -7,6 +7,9 @@ module.exports = {
         "nav-item": "#112B3C",
         "nav-button": "#F66B0E",
         "footer-bg": "#FFF8F0",
+        "content-bg": "#F5F5F5",
+        "content-small-text": "#828282",
+        search: "#BDBDBD",
       },
       fontFamily: {
         "source-sans-pro": ["Source Sans Pro", "sans-serif"],
