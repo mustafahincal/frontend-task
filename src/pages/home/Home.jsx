@@ -9,7 +9,7 @@ const Home = () => {
           Amazing furniture for your home
           <img
             src="./assets/home-arrow.svg"
-            className="absolute top-9 -right-20"
+            className="absolute top-14 -right-20"
             alt=""
           />
         </div>
