@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="w-full h-[350px] bg-footer-bg flex flex-col items-center justify-between pt-24 pb-4">
       <div className="w-3/4 h-[161px] flex justify-between size-[20px] ">
-        <ul className="bg-white flex flex-col gap-[12px] w-[200px] ">
+        <ul className="bg-white flex flex-col gap-[12px] w-[200px]">
           <li>
             <img src="./assets/Logo.svg" alt="" />
           </li>

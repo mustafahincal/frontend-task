@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <div className="shadow-md">
-      <div className="bg-white w-[1440px] h-[80px] text-nav-item  m-auto flex justify-between items-center">
+      <div className="bg-white w-3/4 h-[80px] text-nav-item  m-auto flex justify-between items-center">
         <img src="./assets/Logo.svg" className="w-[54px] h-[30px]" alt="" />
         <div>
           <ul className="flex gap-[40px] ">
