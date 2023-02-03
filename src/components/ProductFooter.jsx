@@ -32,7 +32,7 @@ const ProductFooter = () => {
         </ul>
       </div>
       <img src="./assets/footer-divider.svg" alt="" />
-      <div className="flex justify-between mt-14">
+      <div className="flex justify-between mt-14 items-center">
         <div className="text-[16px]">© 2022, All rights reserved</div>
         <img src="./assets/footer-creditcards.svg" alt="" />
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductHeader = () => {
   return (
-    <div className="shadow-md rounded-b-full">
+    <div className="rounded-b-product-header shadow-product-header ">
       <div className="bg-white w-4/5 h-[90px] text-nav-item  m-auto flex justify-between  items-center">
         <img src="./assets/ebay.svg" alt="" />
         <div className="rounded-lg bg-product-page-header-search flex ml-10 w-2/5">

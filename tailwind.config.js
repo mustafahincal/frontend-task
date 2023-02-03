@@ -19,6 +19,12 @@ module.exports = {
         "source-sans-pro": ["Source Sans Pro", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+      borderRadius: {
+        "product-header": "40px",
+      },
+      boxShadow: {
+        "product-header": "0px 0px 30px rgba(0, 0, 0, 0.12)",
+      },
     },
   },
   plugins: [],
