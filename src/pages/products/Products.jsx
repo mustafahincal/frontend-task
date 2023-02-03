@@ -20,7 +20,7 @@ const Products = () => {
       <div className="mt-[100px] grid grid-cols-12 gap-x-10 gap-y-20">
         <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+          <div className="product-item-part">
             <div className="product-image">
               <img src="./assets/products-item1.svg" alt="" />
             </div>
@@ -35,7 +35,7 @@ const Products = () => {
         </div>
         <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end">
+          <div className="product-item-part">
             <div className="product-image">
               <img src="./assets/products-item2.svg" alt="" />
             </div>
@@ -50,7 +50,7 @@ const Products = () => {
         </div>
         <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+          <div className="product-item-part ">
             <div className="product-image">
               <img src="./assets/products-item-3.svg" alt="" />
             </div>
@@ -65,7 +65,7 @@ const Products = () => {
         </div>
         <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+          <div className="product-item-part ">
             <div className="product-image">
               <img src="./assets/products-item4.svg" alt="" />
             </div>
@@ -80,7 +80,7 @@ const Products = () => {
         </div>
         <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+          <div className="product-item-part ">
             <div className="product-image">
               <img src="./assets/products-item5.svg" alt="" />
             </div>
@@ -95,7 +95,7 @@ const Products = () => {
         </div>
         <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+          <div className="product-item-part ">
             <div className="product-image">
               <img src="./assets/products-item6.svg" alt="" />
             </div>
@@ -110,7 +110,7 @@ const Products = () => {
         </div>
         <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+          <div className="product-item-part ">
             <div className="product-image">
               <img src="./assets/products-item7.svg" alt="" />
             </div>
@@ -125,7 +125,7 @@ const Products = () => {
         </div>
         <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+          <div className="product-item-part ">
             <div className="product-image">
               <img src="./assets/products-item8.svg" alt="" />
             </div>

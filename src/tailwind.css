@@ -7,4 +7,13 @@
   .contact-input {
     @apply border-2 border-gray-900 p-[21px] text-[16px];
   }
+  .product-item {
+    @apply h-[350px] col-span-3 relative;
+  }
+  .product-image {
+    @apply relative -top-10;
+  }
+  .product-item-part {
+    @apply h-3/4 bg-product-bg p-8 flex flex-col justify-end items-center;
+  }
 }
