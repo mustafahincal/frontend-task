@@ -18,10 +18,10 @@ const Products = () => {
         </div>
       </div>
       <div className="mt-[100px] grid grid-cols-12 gap-x-10 gap-y-20">
-        <div className="h-[350px] col-span-3">
+        <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end relative">
-            <div className="absolute -top-2/3 left-1/2 -translate-x-1/2 translate-y-1/2">
+          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+            <div className="product-image">
               <img src="./assets/products-item1.svg" alt="" />
             </div>
             <div className="w-full">
@@ -33,55 +33,10 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div className="h-[350px] col-span-3">
+        <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end relative">
-            <div className="absolute -top-2/3 left-1/2 -translate-x-1/2 translate-y-1/2 ">
-              <img src="./assets/products-item-3.svg" alt="" />
-            </div>
-            <div className="w-full">
-              <div className="text-[24px] font-bold mb-2">Stool</div>
-              <div className="flex justify-between ">
-                <span>$200</span>
-                <img src="./assets/arrow-right.svg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="h-[350px] col-span-3">
-          <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end relative">
-            <div className="absolute -top-2/3 left-1/2 -translate-x-1/2 translate-y-1/2">
-              <img src="./assets/products-item1.svg" alt="" />
-            </div>
-            <div className="w-full">
-              <div className="text-[24px] font-bold mb-2">Stool</div>
-              <div className="flex justify-between ">
-                <span>$200</span>
-                <img src="./assets/arrow-right.svg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="h-[350px] col-span-3">
-          <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end relative">
-            <div className="absolute -top-2/3 left-1/2 -translate-x-1/2 translate-y-1/2">
-              <img src="./assets/products-item1.svg" alt="" />
-            </div>
-            <div className="w-full">
-              <div className="text-[24px] font-bold mb-2">Stool</div>
-              <div className="flex justify-between ">
-                <span>$200</span>
-                <img src="./assets/arrow-right.svg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="h-[350px] col-span-3">
-          <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end relative">
-            <div className="absolute -top-2/3 left-1/2 -translate-x-1/2 translate-y-1/2">
+          <div className="h-3/4 bg-product-bg p-8 flex items-end">
+            <div className="product-image">
               <img src="./assets/products-item2.svg" alt="" />
             </div>
             <div className="w-full">
@@ -93,11 +48,11 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div className="h-[350px] col-span-3">
+        <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end relative">
-            <div className="absolute -top-2/3 left-1/2 -translate-x-1/2 translate-y-1/2">
-              <img src="./assets/products-item1.svg" alt="" />
+          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+            <div className="product-image">
+              <img src="./assets/products-item-3.svg" alt="" />
             </div>
             <div className="w-full">
               <div className="text-[24px] font-bold mb-2">Stool</div>
@@ -108,11 +63,11 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div className="h-[350px] col-span-3">
+        <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end relative">
-            <div className="absolute -top-2/3 left-1/2 -translate-x-1/2 translate-y-1/2">
-              <img src="./assets/products-item1.svg" alt="" />
+          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+            <div className="product-image">
+              <img src="./assets/products-item4.svg" alt="" />
             </div>
             <div className="w-full">
               <div className="text-[24px] font-bold mb-2">Stool</div>
@@ -123,11 +78,56 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div className="h-[350px] col-span-3">
+        <div className="product-item">
           <div className="h-1/4"></div>
-          <div className="h-3/4 bg-product-bg p-8 flex items-end relative">
-            <div className="absolute -top-2/3 left-1/2 -translate-x-1/2 translate-y-1/2">
-              <img src="./assets/products-item1.svg" alt="" />
+          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+            <div className="product-image">
+              <img src="./assets/products-item5.svg" alt="" />
+            </div>
+            <div className="w-full">
+              <div className="text-[24px] font-bold mb-2">Stool</div>
+              <div className="flex justify-between ">
+                <span>$200</span>
+                <img src="./assets/arrow-right.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="product-item">
+          <div className="h-1/4"></div>
+          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+            <div className="product-image">
+              <img src="./assets/products-item6.svg" alt="" />
+            </div>
+            <div className="w-full">
+              <div className="text-[24px] font-bold mb-2">Stool</div>
+              <div className="flex justify-between ">
+                <span>$200</span>
+                <img src="./assets/arrow-right.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="product-item">
+          <div className="h-1/4"></div>
+          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+            <div className="product-image">
+              <img src="./assets/products-item7.svg" alt="" />
+            </div>
+            <div className="w-full">
+              <div className="text-[24px] font-bold mb-2">Stool</div>
+              <div className="flex justify-between ">
+                <span>$200</span>
+                <img src="./assets/arrow-right.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="product-item">
+          <div className="h-1/4"></div>
+          <div className="h-3/4 bg-product-bg p-8 flex items-end ">
+            <div className="product-image">
+              <img src="./assets/products-item8.svg" alt="" />
             </div>
             <div className="w-full">
               <div className="text-[24px] font-bold mb-2">Stool</div>
