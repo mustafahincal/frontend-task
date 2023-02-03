@@ -11,6 +11,7 @@ module.exports = {
         "content-small-text": "#828282",
         search: "#BDBDBD",
         "product-bg": "#FFF8F0",
+        "customer-comments-bg": "#112B3C",
       },
       fontFamily: {
         "source-sans-pro": ["Source Sans Pro", "sans-serif"],
