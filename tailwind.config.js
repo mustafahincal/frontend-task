@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "nav-item": "#112B3C",
         "nav-button": "#F66B0E",
+        "footer-bg": "#FFF8F0",
       },
       fontFamily: {
         "source-sans-pro": ["Source Sans Pro", "sans-serif"],
