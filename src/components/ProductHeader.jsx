@@ -7,6 +7,11 @@ import DownloadJSON from "./DownloadJson";
 const ProductHeader = () => {
   const { cart, setCartModal, cartTotal } = useCartContext();
 
+  const handleCartModal = () => {
+    window.scrollTo(0, 0);
+    setCartModal(true);
+    document.querySelector("body").style.overflow = "hidden";
+  };
   return (
     <div className="rounded-b-product-header shadow-product-header fixed w-full top-0">
       <div className="bg-white w-4/5 h-[90px] text-nav-item  m-auto flex justify-between  items-center">
@@ -37,7 +42,7 @@ const ProductHeader = () => {
           <span className="font-medium text-[14px]">Wishlist</span>
         </div>
         <button
-          onClick={() => setCartModal(true)}
+          onClick={() => handleCartModal()}
           className="flex items-center gap-2 ml-10 relative"
         >
           <img src={icons.cart} alt="" />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { icons } from "../assets";
 import { useCartContext } from "../contexts/CartContext";
 import Loading from "./Loading";
@@ -6,6 +6,11 @@ import Loading from "./Loading";
 const Cart = () => {
   const { cart, cartModal, setCartModal, removeFromCart, buyProducts } =
     useCartContext();
+
+  const handleCartModelClose = () => {
+    setCartModal(false);
+    document.querySelector("body").style.overflow = "auto";
+  };
 
   return (
     <div className={`modal   ${cartModal && "activeModal"}`}>
@@ -15,7 +20,7 @@ const Cart = () => {
           <div className="text-[24px] underline">
             {cart.length} items in your cart
           </div>
-          <button onClick={() => setCartModal(false)}>
+          <button onClick={() => handleCartModelClose()}>
             <img src={icons.close} alt="" />
           </button>
         </div>
