@@ -6,7 +6,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="shadow-product-header">
+    <div className="shadow-product-header fixed w-full z-20 bg-white">
       <div className="  w-3/4 h-[80px] text-nav-item   m-auto flex justify-between items-center">
         <a href="#home">
           <img src={icons.Logo} className="w-[54px] h-[30px]" alt="" />

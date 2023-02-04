@@ -3,7 +3,7 @@ import { icons } from "../../assets";
 
 const ContactUs = () => {
   return (
-    <div className="py-[130px]  bg-content-bg" id="contact">
+    <div className="py-[130px]  bg-content-bg scroll-m-[50px]" id="contact">
       <div className="w-3/4 m-auto">
         <div className="flex justify-between gap-16">
           <div className="w-1/2">

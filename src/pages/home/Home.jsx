@@ -4,7 +4,7 @@ import Search from "../../components/Search";
 
 const Home = () => {
   return (
-    <div className="bg-content-bg pt-[150px]">
+    <div className="bg-content-bg pt-[250px] " id="home">
       <div className="w-3/4 m-auto flex flex-col ">
         <div className="flex flex-col items-center pb-[150px] relative">
           <div className="font-bold text-[96px] w-[970px] text-center leading-[90px] text-nav-item relative">

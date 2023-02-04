@@ -3,7 +3,10 @@ import { icons } from "../../assets";
 
 const CustomerComments = () => {
   return (
-    <div className="py-[130px] bg-customer-comments-bg text-white" id="comment">
+    <div
+      className="py-[130px] bg-customer-comments-bg text-white scroll-m-[100px]"
+      id="comment"
+    >
       <div className="w-3/4 m-auto">
         <div className="text-[64px] font-bold">What do customers say...</div>
         <div className="flex justify-center mt-20 px-40">

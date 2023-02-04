@@ -35,7 +35,7 @@ const Products = () => {
   };
 
   return (
-    <div className="pb-[130px]  bg-content-bg" id="products">
+    <div className="pb-[130px]  bg-content-bg scroll-m-[100px]" id="products">
       <div className="w-3/4 m-auto">
         <div className="text-center">
           <div className="text-[64px] font-bold">Products</div>
@@ -63,7 +63,7 @@ const Products = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-[70px] grid grid-cols-12 gap-x-10 gap-y-16">
+        <div className="mt-[50px] grid grid-cols-12 gap-x-10 gap-y-16">
           {products[pageNumber]?.map((product) => (
             <div key={product.id} className="product-item">
               <div className="h-1/4"></div>

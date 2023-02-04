@@ -3,7 +3,7 @@ import { icons } from "../../assets";
 
 const AboutUs = () => {
   return (
-    <div className="pt-[130px] bg-content-bg" id="about">
+    <div className="pt-[130px] bg-content-bg scroll-m-[20px]" id="about">
       <div className="w-3/4 m-auto">
         <div>
           <div className="text-[64px] font-bold">About us</div>

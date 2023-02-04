@@ -53,7 +53,7 @@ const Product = () => {
 
   return (
     <>
-      <div className="w-4/5 m-auto mt-10">
+      <div className="w-4/5 m-auto mt-10 pt-[100px]">
         <div className="flex gap-6 items-center">
           <Link to="/">
             <img src={icons.productPageLeftArrow} alt="" />

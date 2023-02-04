@@ -8,10 +8,12 @@ const ProductHeader = () => {
   const { cart, setCartModal, cartTotal } = useCartContext();
 
   return (
-    <div className="rounded-b-product-header shadow-product-header ">
+    <div className="rounded-b-product-header shadow-product-header fixed w-full top-0">
       <div className="bg-white w-4/5 h-[90px] text-nav-item  m-auto flex justify-between  items-center">
         <div className="cursor-pointer">
-          <img src={icons.ebay} alt="" />
+          <div onClick={() => window.scrollTo(0, 0)}>
+            <img src={icons.ebay} alt="" />
+          </div>
         </div>
         <div className="rounded-lg bg-product-page-header-search flex ml-10 w-2/5">
           <div className="p-[12px] flex justify-between">
