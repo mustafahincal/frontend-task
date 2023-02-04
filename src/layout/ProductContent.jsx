@@ -4,11 +4,11 @@ import ProductLayout from "./ProductLayout";
 
 const ProductContent = () => {
   return (
-    <>
+    <div className="font-poppins">
       <ProductLayout>
         <Product />
       </ProductLayout>
-    </>
+    </div>
   );
 };
 

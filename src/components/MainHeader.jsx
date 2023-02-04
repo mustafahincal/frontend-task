@@ -8,9 +8,11 @@ const Header = () => {
     navigate("/product");
   };
   return (
-    <div className="shadow-md">
-      <div className="bg-white w-3/4 h-[80px] text-nav-item  m-auto flex justify-between items-center">
-        <img src="./assets/Logo.svg" className="w-[54px] h-[30px]" alt="" />
+    <div className="shadow-product-header">
+      <div className="  w-3/4 h-[80px] text-nav-item   m-auto flex justify-between items-center">
+        <a href="#home">
+          <img src="./assets/Logo.svg" className="w-[54px] h-[30px]" alt="" />
+        </a>
         <div>
           <ul className="flex gap-[40px] ">
             <li>
@@ -28,7 +30,9 @@ const Header = () => {
           </ul>
         </div>
         <div>
-          <span className="mr-[30px]">Contact</span>
+          <span className="mr-[30px]">
+            <a href="#contact">Contact</a>
+          </span>
           <button
             onClick={() => handleBuyButton()}
             className="px-[20px] py-[10px] bg-nav-button text-white"

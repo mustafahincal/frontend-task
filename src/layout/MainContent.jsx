@@ -7,7 +7,7 @@ import MainLayout from "./MainLayout";
 
 const MainContent = () => {
   return (
-    <>
+    <div className="font-source-sans-pro">
       <MainLayout>
         <Home />
         <AboutUs />
@@ -15,7 +15,7 @@ const MainContent = () => {
         <CustomerComments />
         <ContactUs />
       </MainLayout>
-    </>
+    </div>
   );
 };
 

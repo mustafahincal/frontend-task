@@ -28,6 +28,7 @@ module.exports = {
       boxShadow: {
         "product-header": "0px 0px 30px rgba(0, 0, 0, 0.12)",
         "sponsored-item": "0px 4px 30px rgba(0, 0, 0, 0.08)",
+        header: "0px 0px 10px rgba(0, 0, 0, 0.12)",
       },
     },
   },
