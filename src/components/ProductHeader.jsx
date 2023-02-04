@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { icons } from "../assets";
+import { useCartContext } from "../contexts/CartContext";
 
 const ProductHeader = () => {
+  const { cart, setCartModal, cartTotal } = useCartContext();
+
   return (
     <div className="rounded-b-product-header shadow-product-header ">
       <div className="bg-white w-4/5 h-[90px] text-nav-item  m-auto flex justify-between  items-center">
@@ -27,13 +30,16 @@ const ProductHeader = () => {
           <img src={icons.wishlist} alt="" />
           <span className="font-medium text-[14px]">Wishlist</span>
         </div>
-        <div className="flex items-center gap-2 ml-10">
+        <button
+          onClick={() => setCartModal(true)}
+          className="flex items-center gap-2 ml-10"
+        >
           <img src={icons.cart} alt="" />
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start">
             <span className="font-medium text-[14px]">My cart</span>
-            <span className="text-blue-500">$21</span>
+            <span className="text-blue-500">${cartTotal()}</span>
           </div>
-        </div>
+        </button>
         <div className="flex items-center gap-2 ml-10">
           <img src={icons.profile} alt="" />
           <img src={icons.profileDown} alt="" />

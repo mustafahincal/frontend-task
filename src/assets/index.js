@@ -45,9 +45,11 @@ import sponsoredItem4 from "./svg/sponsored-item4.svg";
 import productPageSearchDivider from "./svg/product-page-search-divider.svg";
 import wishlist from "./svg/wishlist.svg";
 import productPageSearch from "./svg/product-page-search.svg";
+import close from "./svg/close.svg";
 
 export const icons = {
   aboutUsItem1,
+  close,
   aboutUsItem2,
   aboutUsItem3,
   productPageSearch,

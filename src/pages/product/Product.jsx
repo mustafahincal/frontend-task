@@ -9,10 +9,12 @@ import { useCartContext } from "../../contexts/CartContext";
 import { useProductContext } from "../../contexts/ProductContext";
 import { useLoadingContext } from "../../contexts/LoadingContext";
 import Loading from "../../components/Loading/Loading";
+import Cart from "../../components/Cart";
 
 const Product = () => {
   const { selectedProduct, setSelectedProduct, products } = useProductContext();
-  const { cart, setCart } = useCartContext();
+  const { cart, addToCart, productControl, removeFromCart, buyProducts } =
+    useCartContext();
   const { isLoading, setIsLoading } = useLoadingContext();
 
   const responsive = {
@@ -40,15 +42,6 @@ const Product = () => {
       setIsLoading(false);
     });
   }, []);
-
-  const handleAddToCartButton = () => {
-    setCart((prev) => [...prev, selectedProduct]);
-    toast.success("Product added to cart");
-  };
-
-  const handleBuyButton = () => {
-    console.log(products);
-  };
 
   if (isLoading) return <Loading />;
 
@@ -88,7 +81,6 @@ const Product = () => {
               <img src={selectedProduct.images[1]} alt="" />
             </div>
             <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
-              {" "}
               <img src={selectedProduct.images[2]} alt="" />
             </div>
             <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
@@ -150,17 +142,26 @@ const Product = () => {
           </div>
           <div className="mt-6 flex gap-4">
             <button
-              onClick={handleBuyButton}
+              onClick={buyProducts}
               className="text-white bg-product-search-button py-3 px-20 text-xl rounded-xl"
             >
               But it now
             </button>
-            <button
-              onClick={handleAddToCartButton}
-              className="bg-product-image-bg text-product-search-button py-3 px-20 text-xl rounded-xl"
-            >
-              Add to cart
-            </button>
+            {!productControl(id) ? (
+              <button
+                onClick={() => addToCart(selectedProduct)}
+                className="bg-product-image-bg text-product-search-button py-3 px-20 text-xl rounded-xl"
+              >
+                Add to cart
+              </button>
+            ) : (
+              <button
+                onClick={() => removeFromCart(selectedProduct.id)}
+                className="bg-red-100 text-red-500 py-3 px-20 text-xl rounded-xl"
+              >
+                Remove from cart
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -271,6 +272,7 @@ const Product = () => {
             ))}
           </Carousel>
         </div>
+        <Cart />
       </div>
     </>
   );

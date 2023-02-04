@@ -17,4 +17,10 @@
   .product-item-part {
     @apply h-3/4 bg-product-bg p-8 flex flex-col justify-end items-center;
   }
+  .modal {
+    @apply w-full min-h-full absolute top-0 left-0 bg-black bg-opacity-80 flex justify-center items-center invisible;
+  }
+  .modal.activeModal {
+    @apply visible;
+  }
 }
