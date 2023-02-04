@@ -1,4 +1,5 @@
 import React from "react";
+import { icons } from "../../assets";
 import Search from "../../components/Search";
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
           <div className="font-bold text-[96px] w-[970px] text-center leading-[90px] text-nav-item relative">
             Amazing furniture for your home
             <img
-              src="./assets/home-arrow.svg"
+              src={icons.homeArrow}
               className="absolute top-14 -right-20"
               alt=""
             />
@@ -26,7 +27,7 @@ const Home = () => {
 
       <div>
         <img
-          src="./assets/home.svg"
+          src={icons.home}
           className="w-full h-[700px] object-cover"
           alt=""
         />

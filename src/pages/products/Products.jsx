@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { icons } from "../../assets";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -79,7 +80,7 @@ const Products = () => {
                   <div className="flex justify-between ">
                     <span className="text-[18px]">${product.price}</span>
                     <Link to={`/product/${product.id}`}>
-                      <img src="./assets/arrow-right.svg" alt="" />
+                      <img src={icons.arrowRight} alt="" />
                     </Link>
                   </div>
                 </div>
@@ -92,13 +93,13 @@ const Products = () => {
             className="cursor-pointer"
             onClick={() => handleTogglePageNumber(-1)}
           >
-            <img src="./assets/left-arrow.svg" alt="" />
+            <img src={icons.leftArrow} alt="" />
           </div>
           <div
             className="cursor-pointer"
             onClick={() => handleTogglePageNumber(1)}
           >
-            <img src="./assets/right-arrow.svg" alt="" />
+            <img src={icons.rightArrow} alt="" />
           </div>
         </div>
       </div>

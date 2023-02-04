@@ -1,4 +1,5 @@
 import React from "react";
+import { icons } from "../assets";
 
 const Search = () => {
   return (
@@ -10,7 +11,7 @@ const Search = () => {
     "
       />
       <span>
-        <img src="./assets/search-normal.svg" alt="" />
+        <img src={icons.seachNormal} alt="" />
       </span>
     </div>
   );

@@ -1,17 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { icons } from "../assets";
 
 const Header = () => {
   const navigate = useNavigate();
 
   const handleBuyButton = () => {
-    navigate("/product");
+    navigate("/product/3");
   };
   return (
     <div className="shadow-product-header">
       <div className="  w-3/4 h-[80px] text-nav-item   m-auto flex justify-between items-center">
         <a href="#home">
-          <img src="./assets/Logo.svg" className="w-[54px] h-[30px]" alt="" />
+          <img src={icons.Logo} className="w-[54px] h-[30px]" alt="" />
         </a>
         <div>
           <ul className="flex gap-[40px] ">

@@ -1,4 +1,5 @@
 import React from "react";
+import { icons } from "../assets";
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className="w-3/4 h-[161px] flex justify-between size-[20px] ">
         <ul className="bg-white flex flex-col gap-[12px] w-[200px]">
           <li>
-            <img src="./assets/Logo.svg" alt="" />
+            <img src={icons.Logo} alt="" />
           </li>
           <li>
             <span>4517 Washington Ave. Manchester, Kentucky 39495</span>

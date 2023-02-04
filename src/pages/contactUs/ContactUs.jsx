@@ -1,4 +1,5 @@
 import React from "react";
+import { icons } from "../../assets";
 
 const ContactUs = () => {
   return (
@@ -8,17 +9,17 @@ const ContactUs = () => {
           <div className="w-1/2">
             <div className="grid grid-cols-4 w-full gap-y-10 gap-x-10  -top-32">
               <div className="flex flex-col gap-10 col-span-2 mt-24">
-                <img src="./assets/contact-item2.svg" alt="" />
-                <img src="./assets/contact-item4.svg" alt="" />
+                <img src={icons.contactItem2} alt="" />
+                <img src={icons.contactItem4} alt="" />
               </div>
               <div className="flex flex-col gap-10 col-span-2">
                 <img
-                  src="./assets/contact-item1.svg"
+                  src={icons.contactItem1}
                   className="w-[220px] object-cover"
                   alt=""
                 />
                 <img
-                  src="./assets/contact-item3.svg"
+                  src={icons.contactItem3}
                   alt=""
                   className="w-[220px] object-cover"
                 />

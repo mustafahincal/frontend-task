@@ -1,4 +1,5 @@
 import React from "react";
+import { icons } from "../../assets";
 
 const AboutUs = () => {
   return (
@@ -46,12 +47,12 @@ const AboutUs = () => {
           <div className="w-1/2 ">
             <div className="grid grid-cols-4 gap-y-10 gap-x-10 relative -top-40">
               <div className="flex flex-col gap-10 col-span-2 mt-24">
-                <img src="./assets/about-us-item1.svg" alt="" />
-                <img src="./assets/about-us-item2.svg" alt="" />
+                <img src={icons.aboutUsItem1} alt="" />
+                <img src={icons.aboutUsItem2} alt="" />
               </div>
               <div className="flex flex-col gap-10 col-span-2 ">
-                <img src="./assets/about-us-item3.svg" alt="" />
-                <img src="./assets/about-us-item4.svg" alt="" />
+                <img src={icons.aboutUsItem3} alt="" />
+                <img src={icons.aboutUsItem4} alt="" />
               </div>
             </div>
           </div>

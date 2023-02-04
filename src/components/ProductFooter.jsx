@@ -1,11 +1,12 @@
 import React from "react";
+import { icons } from "../assets";
 
 const ProductFooter = () => {
   return (
     <div className="bg-white w-4/5  m-auto mt-20">
       <hr className="w-full m-auto" />
       <div className="flex justify-between py-20">
-        <img src="./assets/ebay.svg" className="self-start" alt="" />
+        <img src={icons.ebay} className="self-start" alt="" />
         <ul className="flex flex-col gap-y-5">
           <li className="font-medium text-[24px] mb-4">Account</li>
           <li>Wishlist</li>
@@ -34,7 +35,7 @@ const ProductFooter = () => {
       <hr className="w-full m-auto" />
       <div className="flex justify-between my-14 items-center">
         <div className="text-[16px]">© 2022, All rights reserved</div>
-        <img src="./assets/footer-creditcards.svg" alt="" />
+        <img src={icons.footerCreditcards} alt="" />
       </div>
     </div>
   );
