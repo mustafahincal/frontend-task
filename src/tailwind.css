@@ -12,7 +12,7 @@
     @apply h-[350px] col-span-3 relative;
   }
   .product-image {
-    @apply relative -top-10;
+    @apply relative -top-16;
   }
   .product-item-part {
     @apply h-3/4 bg-product-bg p-8 flex flex-col justify-end items-center;
