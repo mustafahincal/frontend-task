@@ -11,7 +11,7 @@ import { useLoadingContext } from "../../contexts/LoadingContext";
 import Loading from "../../components/Loading/Loading";
 
 const Product = () => {
-  const { selectedProduct, setSelectedProduct } = useProductContext();
+  const { selectedProduct, setSelectedProduct, products } = useProductContext();
   const { cart, setCart } = useCartContext();
   const { isLoading, setIsLoading } = useLoadingContext();
 
@@ -47,7 +47,7 @@ const Product = () => {
   };
 
   const handleBuyButton = () => {
-    console.log(cart);
+    console.log(products);
   };
 
   if (isLoading) return <Loading />;
@@ -248,76 +248,27 @@ const Product = () => {
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
           >
-            <div className="w-[250px] h-[340px] flex flex-col rounded-3xl p-5 bg-white shadow-sponsored-item gap-0.5">
-              <div className="w[200px] h-[200px] flex justify-center items-center rounded-3xl bg-product-image-bg">
-                <img src={icons.sponsoredItem1} alt="" />
-              </div>
-              <span className="text-gray-600 mt-3">iPhone 12 Charger...</span>
-              <span className="text-gray-500">Apple</span>
-              <div className="flex justify-between items-center">
-                <span className="font-medium text-[24px] ">13.90$</span>
-                <div className="flex gap-2 items-center">
-                  <img src={icons.productStar} alt="" />
-                  <span>4.5</span>
+            {products[1]?.map((product) => (
+              <div
+                key={product.id}
+                className="w-[250px] h-[340px] flex flex-col rounded-3xl p-5 bg-white shadow-sponsored-item gap-0.5"
+              >
+                <div className="w[200px] h-[200px] flex justify-center items-center rounded-3xl bg-product-image-bg">
+                  <img src={product.images[0]} alt="" />
+                </div>
+                <span className="text-gray-600 mt-3"> {product.title} </span>
+                <span className="text-gray-500"> {product.brand} </span>
+                <div className="flex justify-between items-center">
+                  <span className="font-medium text-[24px] ">
+                    {product.price}$
+                  </span>
+                  <div className="flex gap-2 items-center">
+                    <img src={icons.productStar} alt="" />
+                    <span>{product.rating}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="w-[250px] h-[340px] flex flex-col rounded-3xl p-5 bg-white shadow-sponsored-item gap-0.5">
-              <div className="w[200px] h-[200px] flex justify-center items-center rounded-3xl bg-product-image-bg">
-                <img src={icons.sponsoredItem2} alt="" />
-              </div>
-              <span className="text-gray-600 mt-3">iPhone 12 Charger...</span>
-              <span className="text-gray-500">Apple</span>
-              <div className="flex justify-between items-center">
-                <span className="font-medium text-[24px] ">13.90$</span>
-                <div className="flex gap-2 items-center">
-                  <img src={icons.productStar} alt="" />
-                  <span>4.5</span>
-                </div>
-              </div>
-            </div>
-            <div className="w-[250px] h-[340px] flex flex-col rounded-3xl p-5 bg-white shadow-sponsored-item gap-0.5">
-              <div className="w[200px] h-[200px] flex justify-center items-center rounded-3xl bg-product-image-bg">
-                <img src={icons.sponsoredItem3} alt="" />
-              </div>
-              <span className="text-gray-600 mt-3">iPhone 12 Charger...</span>
-              <span className="text-gray-500">Apple</span>
-              <div className="flex justify-between items-center">
-                <span className="font-medium text-[24px] ">13.90$</span>
-                <div className="flex gap-2 items-center">
-                  <img src={icons.productStar} alt="" />
-                  <span>4.5</span>
-                </div>
-              </div>
-            </div>
-            <div className="w-[250px] h-[340px] flex flex-col rounded-3xl p-5 bg-white shadow-sponsored-item gap-0.5">
-              <div className="w[200px] h-[200px] flex justify-center items-center rounded-3xl bg-product-image-bg">
-                <img src={icons.sponsoredItem4} alt="" />
-              </div>
-              <span className="text-gray-600 mt-3">iPhone 12 Charger...</span>
-              <span className="text-gray-500">Apple</span>
-              <div className="flex justify-between items-center">
-                <span className="font-medium text-[24px] ">13.90$</span>
-                <div className="flex gap-2 items-center">
-                  <img src={icons.productStar} alt="" />
-                  <span>4.5</span>
-                </div>
-              </div>
-            </div>
-            <div className="w-[250px] h-[340px] flex flex-col rounded-3xl p-5 bg-white shadow-sponsored-item gap-0.5">
-              <div className="w[200px] h-[200px] flex justify-center items-center rounded-3xl bg-product-image-bg">
-                <img src={icons.sponsoredItem1} alt="" />
-              </div>
-              <span className="text-gray-600 mt-3">iPhone 12 Charger...</span>
-              <span className="text-gray-500">Apple</span>
-              <div className="flex justify-between items-center">
-                <span className="font-medium text-[24px] ">13.90$</span>
-                <div className="flex gap-2 items-center">
-                  <img src={icons.productStar} alt="" />
-                  <span>4.5</span>
-                </div>
-              </div>
-            </div>
+            ))}
           </Carousel>
         </div>
       </div>

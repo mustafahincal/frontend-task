@@ -17,6 +17,7 @@ const Products = () => {
           productPages = [...productPages, page];
         }
         setProducts(productPages);
+        localStorage.setItem("products", JSON.stringify(productPages));
       })
       .catch((err) => console.log(err));
   }, []);
