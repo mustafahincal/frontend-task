@@ -9,19 +9,21 @@ const Cart = () => {
 
   return (
     <div className={`modal   ${cartModal && "activeModal"}`}>
-      <div className="bg-content-bg text-black w-[900px] h-[700px] py-16 px-16 overflow-y-auto">
+      <div className="bg-content-bg text-black w-[900px] h-[700px] py-16 px-16 overflow-y-auto rounded-xl">
         <div className="flex justify-between items-center">
-          <h1 className="text-[45px] font-bold">Cart</h1>
-          <div className="text-[30px]">{cart.length} items in your cart</div>
+          <h1 className="text-[35px] font-bold">Cart</h1>
+          <div className="text-[24px] underline">
+            {cart.length} items in your cart
+          </div>
           <button onClick={() => setCartModal(false)}>
             <img src={icons.close} alt="" />
           </button>
         </div>
-        <hr className="p-0.5 bg-gray-300 my-8" />
+        <hr className="p-[1px] bg-gray-300 mb-8" />
         {cart?.map((cartItem) => (
           <div
             key={cartItem.id}
-            className=" mb-10 flex rounded-3xl p-5 bg-white shadow-sponsored-item gap-0.5"
+            className=" mb-10 flex rounded-3xl p-4 bg-white shadow-sponsored-item gap-0.5"
           >
             <div className=" w-1/2 h-[200px] flex justify-center items-center rounded-3xl bg-product-image-bg">
               <img

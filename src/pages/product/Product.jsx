@@ -81,7 +81,9 @@ const Product = () => {
               alt=""
             />
           </div>
+
           <div className="mt-10 flex justify-between gap-5">
+            <img src={icons.productPageLeftArrow} alt="" />
             {selectedProduct.images[1] ? (
               <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
                 <img
@@ -109,6 +111,7 @@ const Product = () => {
                 />
               </div>
             ) : null}
+            <img src={icons.productPageRightArrow} alt="" />
           </div>
         </div>
         <div className="w-1/2 flex flex-col">
