@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { icons } from "../../assets";
 import { useCartContext } from "../../contexts/CartContext";
 import { useProductContext } from "../../contexts/ProductContext";
@@ -15,6 +15,7 @@ const Product = () => {
   const { cart, addToCart, productControl, removeFromCart, buyProducts } =
     useCartContext();
   const { isLoading, setIsLoading } = useLoadingContext();
+  const navigate = useNavigate();
 
   const responsive = {
     desktop: {
@@ -40,9 +41,13 @@ const Product = () => {
       setSelectedProduct(result.data);
       setIsLoading(false);
     });
-  }, []);
+  }, [id]);
 
   if (isLoading) return <Loading />;
+
+  const handleSponsoredProductClick = (id) => {
+    navigate(`/product/${id}`);
+  };
 
   return (
     <>
@@ -251,7 +256,8 @@ const Product = () => {
             {products[1]?.map((product) => (
               <div
                 key={product.id}
-                className="w-[250px] h-[340px] flex flex-col rounded-3xl p-5 bg-white shadow-sponsored-item gap-0.5"
+                onClick={() => handleSponsoredProductClick(product.id)}
+                className="w-[250px] h-[340px] flex flex-col rounded-3xl p-5 bg-white shadow-sponsored-item gap-0.5 cursor-pointer"
               >
                 <div className="w[200px] h-[200px] flex justify-center items-center rounded-3xl bg-product-image-bg">
                   <img src={product.images[0]} alt="" />

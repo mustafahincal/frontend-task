@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { icons } from "../assets";
 import { useCartContext } from "../contexts/CartContext";
+import DownloadJSON from "./DownloadJson";
 
 const ProductHeader = () => {
   const { cart, setCartModal, cartTotal } = useCartContext();
@@ -50,7 +51,7 @@ const ProductHeader = () => {
         <div className="flex items-center gap-2 ml-6 bg-product-search-button p-[14px] rounded-lg">
           <img src={icons.browsCategories} alt="" />
           <span className="font-medium text-[14px] text-white">
-            Brows All Categories
+            <DownloadJSON />
           </span>
         </div>
       </div>
