@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useCartContext } from "../contexts/CartContext";
 
 const DownloadJSON = () => {
-  const [jsonData, setJsonData] = useState();
-
-  useEffect(() => {
-    setJsonData(localStorage.getItem("cart"));
-  }, []);
-
   const handleDownload = () => {
+    const jsonData = localStorage.getItem("cart");
     const encodedData = encodeURIComponent(jsonData);
     const link = document.createElement("a");
     link.setAttribute(
