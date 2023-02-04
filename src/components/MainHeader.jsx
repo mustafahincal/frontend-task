@@ -5,9 +5,6 @@ import { icons } from "../assets";
 const Header = () => {
   const navigate = useNavigate();
 
-  const handleBuyButton = () => {
-    navigate("/product/3");
-  };
   return (
     <div className="shadow-product-header">
       <div className="  w-3/4 h-[80px] text-nav-item   m-auto flex justify-between items-center">
@@ -34,12 +31,12 @@ const Header = () => {
           <span className="mr-[30px]">
             <a href="#contact">Contact</a>
           </span>
-          <button
-            onClick={() => handleBuyButton()}
+          <a
+            href="#products"
             className="px-[20px] py-[10px] bg-nav-button text-white"
           >
             Buy online
-          </button>
+          </a>
         </div>
       </div>
     </div>

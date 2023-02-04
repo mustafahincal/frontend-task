@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { icons } from "../assets";
 import { useCartContext } from "../contexts/CartContext";
 import DownloadJSON from "./DownloadJson";
@@ -9,7 +10,9 @@ const ProductHeader = () => {
   return (
     <div className="rounded-b-product-header shadow-product-header ">
       <div className="bg-white w-4/5 h-[90px] text-nav-item  m-auto flex justify-between  items-center">
-        <img src={icons.ebay} alt="" />
+        <div className="cursor-pointer">
+          <img src={icons.ebay} alt="" />
+        </div>
         <div className="rounded-lg bg-product-page-header-search flex ml-10 w-2/5">
           <div className="p-[12px] flex justify-between">
             <div className="flex justify-between gap-2 flex-shrink-0">

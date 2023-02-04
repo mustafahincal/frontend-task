@@ -37,6 +37,7 @@ const Product = () => {
 
   const { id } = useParams();
   useEffect(() => {
+    window.history.scrollRestoration = "manual";
     axios.get(`https://dummyjson.com/products/${id}`).then((result) => {
       setSelectedProduct(result.data);
       setIsLoading(false);
@@ -47,6 +48,7 @@ const Product = () => {
 
   const handleSponsoredProductClick = (id) => {
     navigate(`/product/${id}`);
+    window.location.reload(true);
   };
 
   return (
@@ -80,17 +82,33 @@ const Product = () => {
             />
           </div>
           <div className="mt-10 flex justify-between gap-5">
-            <img src={icons.productPageLeftArrow} alt="" />
-            <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
-              <img src={selectedProduct.images[1]} alt="" />
-            </div>
-            <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
-              <img src={selectedProduct.images[2]} alt="" />
-            </div>
-            <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
-              <img src={selectedProduct.images[3]} alt="" />
-            </div>
-            <img src={icons.productPageRightArrow} alt="" />
+            {selectedProduct.images[1] ? (
+              <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
+                <img
+                  src={selectedProduct.images[1]}
+                  className="w-[120px] h-[120px] object-cover object-center"
+                  alt=""
+                />
+              </div>
+            ) : null}
+            {selectedProduct.images[2] ? (
+              <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
+                <img
+                  src={selectedProduct.images[2]}
+                  className="w-[120px] h-[120px] object-cover object-center"
+                  alt=""
+                />
+              </div>
+            ) : null}
+            {selectedProduct.images[3] ? (
+              <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
+                <img
+                  src={selectedProduct.images[3]}
+                  className="w-[120px] h-[120px] object-cover object-center"
+                  alt=""
+                />
+              </div>
+            ) : null}
           </div>
         </div>
         <div className="w-1/2 flex flex-col">
@@ -190,7 +208,11 @@ const Product = () => {
 
       <div className="w-4/5 m-auto pt-16 py-9   flex gap-20 items-center">
         <div className="bg-product-image-bg w-[300px] h-[300px] flex justify-center items-center rounded-3xl">
-          <img src={icons.productPageAboutImage} alt="" />
+          <img
+            src={selectedProduct.images[0]}
+            className="w-[230px] h-[230px] object-cover object-center"
+            alt=""
+          />
         </div>
         <div>
           <ul>
@@ -253,14 +275,18 @@ const Product = () => {
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
           >
-            {products[1]?.map((product) => (
+            {products[0]?.map((product) => (
               <div
                 key={product.id}
                 onClick={() => handleSponsoredProductClick(product.id)}
                 className="w-[250px] h-[340px] flex flex-col rounded-3xl p-5 bg-white shadow-sponsored-item gap-0.5 cursor-pointer"
               >
                 <div className="w[200px] h-[200px] flex justify-center items-center rounded-3xl bg-product-image-bg">
-                  <img src={product.images[0]} alt="" />
+                  <img
+                    src={product.images[0]}
+                    className="w-[160px] h-[160px] object-cover object-center"
+                    alt=""
+                  />
                 </div>
                 <span className="text-gray-600 mt-3"> {product.title} </span>
                 <span className="text-gray-500"> {product.brand} </span>
