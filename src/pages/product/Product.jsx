@@ -1,10 +1,17 @@
-import React, { useEffect } from "react";
+import axios from "axios";
+import { useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import { icons } from "../../assets";
+import { useCartContext } from "../../context/CartContext";
+import { useProductContext } from "../../context/ProductContext";
 
 const Product = () => {
+  const { selectedProduct, setSelectedProduct } = useProductContext();
+  const { cart, setCart } = useCartContext();
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -23,10 +30,20 @@ const Product = () => {
     },
   };
 
-  const params = useParams();
+  const { id } = useParams();
   useEffect(() => {
-    console.log(params.id);
+    axios
+      .get(`https://dummyjson.com/products/${id}`)
+      .then((result) => setSelectedProduct(result.data));
   }, []);
+
+  const handleAddToCartButton = () => {
+    console.log(selectedProduct);
+    toast.success("Product added to cart");
+  };
+
+  const handleBuyButton = () => {};
+
   return (
     <>
       <div className="w-4/5 m-auto mt-10">
@@ -50,11 +67,15 @@ const Product = () => {
 
       <div className="w-4/5 m-auto py-20 flex justify-between gap-14">
         <div className="w-1/2 flex flex-col items-center">
-          <div className="w-full bg-product-image-bg rounded-3xl flex justify-center items-center">
-            <img src={icons.productImage1} alt="" />
+          <div className="w-[600px] h-[600px]  bg-product-image-bg rounded-3xl flex flex-shrink-0 justify-center items-center">
+            <img
+              src={icons.productImage1}
+              className="w-3/4 object-cover object-center"
+              alt=""
+            />
           </div>
           <div className="mt-10 flex justify-between gap-5">
-            <img src="./assets/product-page-left-arrow.svg" alt="" />
+            <img src={icons.productPageLeftArrow} alt="" />
             <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
               <img src={icons.productImage2} alt="" />
             </div>
@@ -71,7 +92,7 @@ const Product = () => {
         <div className="w-1/2 flex flex-col">
           <div className="flex items-center gap-6 ">
             <span className="font-medium text-[32px]">
-              Apple iPhone 13 (128GB)
+              {selectedProduct.title}
             </span>
             <span className="bg-product-image-bg text-product-search-button py-2 px-10 font-medium text-[21px] rounded-xl">
               Starlight
@@ -88,12 +109,16 @@ const Product = () => {
               <img src={icons.productStar} alt="" />
               <img src={icons.productStarEmpty} alt="" />
             </div>
-            <span className="font-semibold text-[18px]">4.6</span>
+            <span className="font-semibold text-[18px]">
+              {selectedProduct.rating}
+            </span>
             <span className="text-gray-400">from 392 Reviews</span>
           </div>
           <div className="mt-5 gap-1 flex">
             <img src={icons.dollar} className="relative -top-3" alt="" />
-            <span className="font-medium text-[44px]">580</span>
+            <span className="font-medium text-[44px]">
+              {selectedProduct.price}
+            </span>
           </div>
           <ul className="mt-3 flex flex-col gap-5">
             <li className="flex gap-3">
@@ -116,10 +141,16 @@ const Product = () => {
             </span>
           </div>
           <div className="mt-6 flex gap-4">
-            <button className="text-white bg-product-search-button py-3 px-20 text-xl rounded-xl">
+            <button
+              onClick={handleBuyButton}
+              className="text-white bg-product-search-button py-3 px-20 text-xl rounded-xl"
+            >
               But it now
             </button>
-            <button className="bg-product-image-bg text-product-search-button py-3 px-20 text-xl rounded-xl">
+            <button
+              onClick={handleAddToCartButton}
+              className="bg-product-image-bg text-product-search-button py-3 px-20 text-xl rounded-xl"
+            >
               Add to cart
             </button>
           </div>
@@ -150,6 +181,11 @@ const Product = () => {
         </div>
         <div>
           <ul>
+            {selectedProduct.description?.split(",")?.map((desc, index) => (
+              <li key={index} className="list-disc">
+                {desc}
+              </li>
+            ))}
             <li className="list-disc">
               15 cm (6.1-inch) Super Retina XDR display
             </li>

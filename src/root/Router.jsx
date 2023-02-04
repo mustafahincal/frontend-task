@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import MainContent from "../layout/MainContent";
-import ProductContent from "../layout/ProductContent";
+import MainContent from "../layouts/MainContent";
+import ProductContent from "../layouts/ProductContent";
 
 const Router = () => {
   return (

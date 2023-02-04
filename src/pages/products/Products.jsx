@@ -2,9 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { icons } from "../../assets";
+import { useProductContext } from "../../context/ProductContext";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  const { products, setProducts } = useProductContext();
   const [pageNumber, setPageNumber] = useState(0);
   useEffect(() => {
     axios
