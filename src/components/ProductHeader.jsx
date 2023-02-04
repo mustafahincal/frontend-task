@@ -32,12 +32,15 @@ const ProductHeader = () => {
         </div>
         <button
           onClick={() => setCartModal(true)}
-          className="flex items-center gap-2 ml-10"
+          className="flex items-center gap-2 ml-10 relative"
         >
           <img src={icons.cart} alt="" />
           <div className="flex flex-col items-start">
             <span className="font-medium text-[14px]">My cart</span>
             <span className="text-blue-500">${cartTotal()}</span>
+          </div>
+          <div className="absolute -top-1 left-4 bg-blue-600 text-white w-[20px] h-[20px] rounded-full text-[12px] flex items-center justify-center">
+            {cart.length}
           </div>
         </button>
         <div className="flex items-center gap-2 ml-10">

@@ -3,12 +3,11 @@ import { useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link, useParams } from "react-router-dom";
-import { toast } from "react-toastify";
 import { icons } from "../../assets";
 import { useCartContext } from "../../contexts/CartContext";
 import { useProductContext } from "../../contexts/ProductContext";
 import { useLoadingContext } from "../../contexts/LoadingContext";
-import Loading from "../../components/Loading/Loading";
+import Loading from "../../components/Loading";
 import Cart from "../../components/Cart";
 
 const Product = () => {

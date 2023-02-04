@@ -1,7 +1,7 @@
 import React from "react";
 import { icons } from "../assets";
 import { useCartContext } from "../contexts/CartContext";
-import Loading from "./Loading/Loading";
+import Loading from "./Loading";
 
 const Cart = () => {
   const { cart, cartModal, setCartModal, removeFromCart, buyProducts } =

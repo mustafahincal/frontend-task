@@ -7,7 +7,7 @@ import arrowCircleRight from "./svg/arrow-circle-right.svg";
 import arrowDown from "./svg/arrow-down.svg";
 import arrowRight from "./svg/arrow-right.svg";
 import browsCategories from "./svg/brows-categories.svg";
-import cart from "./svg/cart.svg";
+import cart from "./svg/shopping-cart.svg";
 import contactItem1 from "./svg/contact-item1.svg";
 import contactItem2 from "./svg/contact-item2.svg";
 import contactItem3 from "./svg/contact-item3.svg";
