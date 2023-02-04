@@ -5,12 +5,15 @@ import "react-multi-carousel/lib/styles.css";
 import { Link, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { icons } from "../../assets";
-import { useCartContext } from "../../context/CartContext";
-import { useProductContext } from "../../context/ProductContext";
+import { useCartContext } from "../../contexts/CartContext";
+import { useProductContext } from "../../contexts/ProductContext";
+import { useLoadingContext } from "../../contexts/LoadingContext";
+import Loading from "../../components/Loading/Loading";
 
 const Product = () => {
   const { selectedProduct, setSelectedProduct } = useProductContext();
   const { cart, setCart } = useCartContext();
+  const { isLoading, setIsLoading } = useLoadingContext();
 
   const responsive = {
     desktop: {
@@ -32,17 +35,22 @@ const Product = () => {
 
   const { id } = useParams();
   useEffect(() => {
-    axios
-      .get(`https://dummyjson.com/products/${id}`)
-      .then((result) => setSelectedProduct(result.data));
+    axios.get(`https://dummyjson.com/products/${id}`).then((result) => {
+      setSelectedProduct(result.data);
+      setIsLoading(false);
+    });
   }, []);
 
   const handleAddToCartButton = () => {
-    console.log(selectedProduct);
+    setCart((prev) => [...prev, selectedProduct]);
     toast.success("Product added to cart");
   };
 
-  const handleBuyButton = () => {};
+  const handleBuyButton = () => {
+    console.log(cart);
+  };
+
+  if (isLoading) return <Loading />;
 
   return (
     <>
@@ -69,7 +77,7 @@ const Product = () => {
         <div className="w-1/2 flex flex-col items-center">
           <div className="w-[600px] h-[600px]  bg-product-image-bg rounded-3xl flex flex-shrink-0 justify-center items-center">
             <img
-              src={icons.productImage1}
+              src={selectedProduct.images[0]}
               className="w-3/4 object-cover object-center"
               alt=""
             />
@@ -77,14 +85,14 @@ const Product = () => {
           <div className="mt-10 flex justify-between gap-5">
             <img src={icons.productPageLeftArrow} alt="" />
             <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
-              <img src={icons.productImage2} alt="" />
+              <img src={selectedProduct.images[1]} alt="" />
             </div>
             <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
               {" "}
-              <img src={icons.productImage3} alt="" />
+              <img src={selectedProduct.images[2]} alt="" />
             </div>
             <div className="w-[150px] h-[150px] bg-product-image-bg rounded-3xl flex justify-center items-center">
-              <img src={icons.productImage4} alt="" />
+              <img src={selectedProduct.images[3]} alt="" />
             </div>
             <img src={icons.productPageRightArrow} alt="" />
           </div>

@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { icons } from "../../assets";
-import { useProductContext } from "../../context/ProductContext";
+import { useProductContext } from "../../contexts/ProductContext";
 
 const Products = () => {
   const { products, setProducts } = useProductContext();

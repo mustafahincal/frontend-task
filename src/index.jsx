@@ -4,9 +4,10 @@ import "./tailwind.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./root/App";
-import { ProductProvider } from "./context/ProductContext";
+import { ProductProvider } from "./contexts/ProductContext";
 import "react-toastify/dist/ReactToastify.css";
-import { CartProvider } from "./context/CartContext";
+import { CartProvider } from "./contexts/CartContext";
+import { LoadingProvider } from "./contexts/LoadingContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,9 @@ root.render(
     <React.StrictMode>
       <ProductProvider>
         <CartProvider>
-          <App />
+          <LoadingProvider>
+            <App />
+          </LoadingProvider>
         </CartProvider>
       </ProductProvider>
     </React.StrictMode>
