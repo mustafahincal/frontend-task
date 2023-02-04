@@ -13,12 +13,18 @@ const Header = () => {
         <img src="./assets/Logo.svg" className="w-[54px] h-[30px]" alt="" />
         <div>
           <ul className="flex gap-[40px] ">
-            <li>Home</li>
-            <li>About Us</li>
-            <li className="flex gap-[12px]">
-              Products <img src="./assets/arrow-down.svg" alt="" />{" "}
+            <li>
+              <a href="#home">Home</a>
             </li>
-            <li>Testimonial</li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li className="flex gap-[12px]">
+              <a href="#products">Products</a>
+            </li>
+            <li>
+              <a href="#comment">Testimonial</a>
+            </li>
           </ul>
         </div>
         <div>
