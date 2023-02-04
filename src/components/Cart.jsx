@@ -11,6 +11,10 @@ const Cart = () => {
     setCartModal(false);
     document.querySelector("body").style.overflow = "auto";
   };
+  const handleBuyProducts = () => {
+    buyProducts();
+    document.querySelector("body").style.overflow = "auto";
+  };
 
   return (
     <div className={`modal   ${cartModal && "activeModal"}`}>
@@ -64,7 +68,7 @@ const Cart = () => {
           <div className="text-right py-30">
             <button
               className="bg-green-500 py-2 px-10 text-white rounded-xl text-lg  mb-30"
-              onClick={() => buyProducts()}
+              onClick={() => handleBuyProducts()}
             >
               Buy products
             </button>
