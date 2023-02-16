@@ -13,7 +13,7 @@ const ProductHeader = () => {
     document.querySelector("body").style.overflow = "hidden";
   };
   return (
-    <div className="rounded-b-product-header shadow-product-header fixed w-full top-0">
+    <div className="rounded-b-product-header shadow-product-header fixed w-full top-0 z-40">
       <div className="bg-white w-4/5 h-[90px] text-nav-item  m-auto flex justify-between  items-center">
         <div className="cursor-pointer">
           <div onClick={() => window.scrollTo(0, 0)}>

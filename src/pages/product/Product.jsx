@@ -19,6 +19,7 @@ const Product = () => {
 
   const { id } = useParams();
   useEffect(() => {
+    window.scrollTo(0, 0);
     window.history.scrollRestoration = "manual";
     axios.get(`https://dummyjson.com/products/${id}`).then((result) => {
       setSelectedProduct(result.data);

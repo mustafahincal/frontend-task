@@ -51,6 +51,7 @@ const SponsoredItems = () => {
           removeArrowOnDeviceType={["tablet", "mobile"]}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
+          className="z-10"
         >
           {products[0]?.map((product) => (
             <div

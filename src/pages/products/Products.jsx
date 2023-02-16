@@ -81,9 +81,9 @@ const Products = () => {
                   </div>
                   <div className="flex justify-between ">
                     <span className="text-[18px]">${product.price}</span>
-                    <a href={`/product/${product.id}`}>
+                    <Link to={`/product/${product.id}`}>
                       <img src={icons.arrowRight} alt="" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
