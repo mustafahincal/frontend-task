@@ -1,4 +1,4 @@
-# Here is how it looks in vercel : [Front-end-task](https://frontend-task-fawn.vercel.app/)
+# Here is how it looks in vercel : [Frontend-task](https://frontend-task-fawn.vercel.app/)
 
 
 # Getting Started with Create React App
