@@ -1,3 +1,6 @@
+# Here is how it looks in vercel : [Front-end-task](https://frontend-task-fawn.vercel.app/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
